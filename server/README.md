@@ -30,33 +30,33 @@ Run `nmp run dev` for a dev server. Navigate to `http://localhost:8000/`. The ap
 
 
 ## Code scaffolding
--- client/my-app
-    -- public
-    -- src
-        -- components
-        -- App.css
-        -- App.test.tsx
-        -- App.tsx
-        -- helperFunctions.ts
-        -- index.css
-        -- react-app-env.d.ts
-        -- reportWebVital.ts
-        -- setupTests.ts
-        -- packagew
+    -- client/my-app
+        -- public
+        -- src
+            -- components
+            -- App.css
+            -- App.test.tsx
+            -- App.tsx
+            -- helperFunctions.ts
+            -- index.css
+            -- react-app-env.d.ts
+            -- reportWebVital.ts
+            -- setupTests.ts
+            -- packagew
+            -- README
+            -- tsconfig
+    -- server
+        -- deskpassServices
+        -- dist
+        -- middleWares
+        -- plugins
+        -- routes
+        -- dump.rdb
+        -- proxy.ts
+        -- server.ts
         -- README
+        -- package
         -- tsconfig
--- server
-    -- deskpassServices
-    -- dist
-    -- middleWares
-    -- plugins
-    -- routes
-    -- dump.rdb
-    -- proxy.ts
-    -- server.ts
-    -- README
-    -- package
-    -- tsconfig
 
 
 ## Build
@@ -66,7 +66,7 @@ None
 
 ## Running unit tests
 
-Runs automatically
+Run `nmp run test`
 
 
 ## API documentation
