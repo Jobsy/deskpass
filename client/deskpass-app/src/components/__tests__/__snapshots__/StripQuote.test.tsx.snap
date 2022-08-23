@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="sc-bczRLJ eJKZJo"
+  data-testid="stripe-quote"
+>
+  <div
+    className="sc-hKMtZM IMoHK"
+    data-testid="tool-tip"
+  >
+    <button
+      className="sc-eCYdqJ jWFya"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <button
+        className="sc-eCYdqJ jWFya"
+      >
+        <h2>
+          Word-Quote Striper
+        </h2>
+      </button>
+    </button>
+  </div>
+  <textarea
+    autoComplete="on"
+    className="sc-gsnTZi gKEenm"
+    onChange={[Function]}
+    placeholder="Enter quote"
+    value=""
+  />
+  <p
+    className="sc-dkzDqf ejhFWH"
+  >
+    Invalid!
+     
+  </p>
+</div>
+`;

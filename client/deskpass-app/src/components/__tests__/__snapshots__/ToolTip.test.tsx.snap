@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="sc-hKMtZM IMoHK"
+  data-testid="tool-tip"
+>
+  <button
+    className="sc-eCYdqJ byKboX"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  />
+</div>
+`;
