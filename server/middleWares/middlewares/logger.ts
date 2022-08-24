@@ -2,6 +2,7 @@ import moment from "moment"
 import { Request, Response, NextFunction } from "express"
 
 
+// intercept and logs info about the url being fetch or requested in the terminal
 export const logger =  (req: Request, res: Response, next: NextFunction) => {
     console.dir({
         timeStamp: `${moment().format()}`,
@@ -12,6 +13,6 @@ export const logger =  (req: Request, res: Response, next: NextFunction) => {
         userId: "none",
         inputData: "none"
     });
-    next();
+    next(); // continues to the next call regardless of what happens
 }
 
