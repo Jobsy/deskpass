@@ -32,7 +32,6 @@ describe("proxy", () => {
     } as Request;
 
     const result = _.cloneDeep(proxy(req as Request, res as Response, next as NextFunction));
-    console.log("resu: ", result)
     expect(result).toBeFalsy();
   })
 
