@@ -2,7 +2,7 @@
 import request from "supertest";
 
 import app from '../app';
-
+ 
 
 jest.mock('../proxy', () => jest.fn((req, res, next) => {
   next()
@@ -81,5 +81,3 @@ describe("GET / - deskpass endpoints - /deskpass/dog API Request", () => {
     expect(result.statusCode).toEqual(200);
   });
 })
-
-

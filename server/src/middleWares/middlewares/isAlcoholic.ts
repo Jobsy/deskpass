@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express"
-import { isAlcoholic } from "../../plugIns"
+import { Request, Response, NextFunction } from "express";
+import { isAlcoholic } from "../../plugIns";
 
 
 // check if query (alchol) is true

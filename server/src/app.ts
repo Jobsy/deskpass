@@ -1,10 +1,10 @@
 
-import express, {Express, Request, Response } from 'express';
+import express, { Express, Request, Response } from 'express';
 
 import { is18Plus, nonAlcoholic, countriesWithDeskpass, logger, getCacheData, setCacheData } from './middleWares';
-import routerCocktail from "./routes/deskpass/cocktail"
-import routerCountry from "./routes/deskpass/country"
-import routerDog from "./routes/deskpass/dog"
+import routerCocktail from "./routes/deskpass/cocktail";
+import routerCountry from "./routes/deskpass/country";
+import routerDog from "./routes/deskpass/dog";
 import proxy from './proxy';
 
 

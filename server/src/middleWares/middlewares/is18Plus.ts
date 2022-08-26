@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express"
-import { is18 } from "../../plugIns"
+import { Request, Response, NextFunction } from "express";
+import { is18 } from "../../plugIns";
 
 
 // check if input age is equal or over 18

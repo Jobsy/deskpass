@@ -1,4 +1,4 @@
-import { Request, Response } from "express"
+import { Request, Response } from "express";
 
 // set/store uncached data on redis database
 export const setCacheData = async (req: Request, res: Response) => {
