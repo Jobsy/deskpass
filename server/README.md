@@ -23,6 +23,8 @@ This project was given to Oluwajoba Bello by the Co-Founder, Chief Technical Off
 
 ### 4) Systems like Kubernetes and Docker Swarm are the end result of years and years of effort spent slowly abstracting server resources from being "a single physical machine your app is running on" to "a distributed pool of generic resources any app can run on." What do you think the next level of server abstraction will look like in 10 years? How will web apps be deployed and managed a decade from now? Will container management systems such as Kubernetes still be used, or will there be another layer of abstraction used?
 
+### kindly follow this [link](/server/assests/kubernetes_and_docker_what_next_.pdf) for question 4 [answer](/server/assests/kubernetes_and_docker_what_next_.pdf).
+
 
 ## Development server
 
@@ -46,14 +48,16 @@ Run `nmp run dev` for a dev server. Navigate to `http://localhost:8000/`. The ap
             -- README
             -- tsconfig
     -- server
-        -- deskpassServices
         -- dist
-        -- middleWares
-        -- plugins
-        -- routes
+        -- src
+            -- tests
+            -- deskpassServices
+            -- middleWares
+            -- plugins
+            -- routes
+            -- proxy.ts
+            -- server.ts
         -- dump.rdb
-        -- proxy.ts
-        -- server.ts
         -- README
         -- package
         -- tsconfig
