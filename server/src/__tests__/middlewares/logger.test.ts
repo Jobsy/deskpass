@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express"
 
-import { logger } from "../middleWares"
+import { logger } from "../../middleWares"
 
 
 // let req = Request;

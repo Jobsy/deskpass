@@ -22,7 +22,7 @@ beforeEach(() => {
 
   // mocked next
   next = (err: any) => err as unknown as NextFunction;
-})
+});
 
 describe("proxy", () => {
   it("should continue to the next middleware or function if deskpassApprovedFetchSites is provided", async () => {
@@ -33,7 +33,7 @@ describe("proxy", () => {
 
     const result = _.cloneDeep(proxy(req as Request, res as Response, next as NextFunction));
     expect(result).toBeFalsy();
-  })
+  }, 60000);
 
   it("should display error message if a wrong fetch/sites are provided", async () => {
     // mocked request
@@ -45,7 +45,7 @@ describe("proxy", () => {
 
     expect(result.res.status).toEqual(404);
     expect(result.res.response).toEqual("Unapproved site");
-  })
+  }, 60000);
   
   it("should route to the service path if deskpassApprovedServices is provided", async () => {
     // mocked request
@@ -56,7 +56,7 @@ describe("proxy", () => {
     const result = _.cloneDeep(proxy(req as Request, res as Response, next as NextFunction)); 
   
     expect(result.res.sendFile).toEqual(req.url.split('/')[1]);
-  })
+  }, 60000);
 
   it("should display error message if a wrong services are provided", async () => {
     // mocked request
@@ -68,5 +68,5 @@ describe("proxy", () => {
 
     expect(result.res.status).toEqual(404);
     expect(result.res.response).toEqual("Unapproved site");
-  })
+  }, 60000);
 });

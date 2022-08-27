@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
-import { is18Plus } from "../middleWares";
+import { is18Plus } from "../../middleWares";
+
 
 let _ = require('lodash');
 

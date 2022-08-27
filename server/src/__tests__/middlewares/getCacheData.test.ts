@@ -1,7 +1,7 @@
 
 import { Request, Response, NextFunction } from "express";
 
-import { db, getCacheData } from "../middleWares/middlewares/getCacheData";
+import { db, getCacheData } from "../../middleWares/middlewares/getCacheData";
 
 let _ = require('lodash');
 
