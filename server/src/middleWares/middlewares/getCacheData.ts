@@ -44,3 +44,4 @@ export const getCacheData = async (req: Request, res: Response, next: NextFuncti
 
 
 
+// function createClient<redis.RedisModules, redis.RedisFunctions, redis.RedisScripts>(options?: redis.RedisClientOptions<redis.RedisModules, redis.RedisFunctions, redis.RedisScripts> | undefined): RedisClientType<...>
