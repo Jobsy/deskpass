@@ -1,48 +1,47 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from 'express';
 
-import { nonAlcoholic } from "../../middleWares";
+import { nonAlcoholic } from '../../middleWares';
 
-let _ = require('lodash');
+const _ = require('lodash');
 
 let res: Response;
 let next: NextFunction;
 
 beforeEach(() => {
-  // mocked response
-  res = {
-    status: jest.fn(status => ({
-      json: jest.fn(resObj => ({
-        res: { status: status, ...resObj }
-      })),
-    })),
-  } as unknown as Response;
+	// mocked response
+	res = {
+		status: jest.fn((status) => ({
+			json: jest.fn((resObj) => ({
+				res: { status, ...resObj },
+			})),
+		})),
+	} as unknown as Response;
 
-  // mocked next
-  next = (err: any) => err as unknown as NextFunction;
-})
+	// mocked next
+	next = (err: any) => err as unknown as NextFunction;
+});
 
+describe('isAlcoholic', () => {
+	it('should continue to the next middleware or function if query (alcoholic) is false', async () => {
+		// mocked request
+		const req = {
+			query: { alcoholic: 'false' },
+		} as unknown as Request;
 
-describe("isAlcoholic", () => {
-    it("should continue to the next middleware or function if query (alcoholic) is false", async () => {
-        // mocked request
-        const req = {
-            query:{alcoholic: "false"},
-        } as unknown as Request;
-  
-        const result = nonAlcoholic(req as Request, res as Response, next as NextFunction);
+		const result = nonAlcoholic(req, res, next);
 
-        expect(result).toBeFalsy();
-    });
+		expect(result).toBeFalsy();
+	});
 
-    it("should show error page if query (alcoholic) is true", async () => {
-        // mocked request
-        const req = {
-            query:{alcoholic: "true"},
-        } as unknown as Request;
-    
-        const result = _.cloneDeep(nonAlcoholic(req as Request, res as Response, next as NextFunction));
+	it('should show error page if query (alcoholic) is true', async () => {
+		// mocked request
+		const req = {
+			query: { alcoholic: 'true' },
+		} as unknown as Request;
 
-        expect(result.res.status).toEqual(404);
-        expect(result.res.response).toEqual("Drink is Alcoholic");
-    });
-})
+		const result = _.cloneDeep(nonAlcoholic(req, res, next));
+
+		expect(result.res.status).toEqual(404);
+		expect(result.res.response).toEqual('Drink is Alcoholic');
+	});
+});

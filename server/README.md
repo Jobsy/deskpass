@@ -2,7 +2,6 @@
 
 This project was given to Oluwajoba Bello by the Co-Founder, Chief Technical Officer - Tim Shaw as a take home for Deskpass's Frontend Engineering role
 
-
 ## Instructions:
 
 ### Take up to 3 weeks to answer these and work at your own pace. We like thoughtful answers, but we’re not expecting you to spend weeks and weeks laboring on these either.
@@ -10,8 +9,8 @@ This project was given to Oluwajoba Bello by the Co-Founder, Chief Technical Off
 ### We’re not just looking for the “right answer” here, we’re more interested in your thought process and how you arrive at your answers. Go with the way that you think is best, as that is part of the evaluation.
 
 ### Be descriptive and leave lots of comments to help us understand why you made the choices you did.
-### Submit your responses however you'd like, as long as everything is there. Generally just creating a repo on Github or similar is convenient but it's up to you.
 
+### Submit your responses however you'd like, as long as everything is there. Generally just creating a repo on Github or similar is convenient but it's up to you.
 
 ## Questions:
 
@@ -25,13 +24,12 @@ This project was given to Oluwajoba Bello by the Co-Founder, Chief Technical Off
 
 ### kindly follow this [link](/server/assests/kubernetes_and_docker_what_next_.pdf) for question 4 [answer](/server/assests/kubernetes_and_docker_what_next_.pdf).
 
-
 ## Development server
 
 Run `nmp run dev` for a dev server. Navigate to `http://localhost:8000/`. The app will automatically reload if you change any of the source files.
 
-
 ## Code scaffolding
+
     -- client/my-app
         -- public
         -- src
@@ -62,16 +60,13 @@ Run `nmp run dev` for a dev server. Navigate to `http://localhost:8000/`. The ap
         -- package
         -- tsconfig
 
-
 ## Build
 
 None
 
-
 ## Running unit tests
 
 Run `nmp run test`
-
 
 ## API documentation
 

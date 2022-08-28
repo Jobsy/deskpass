@@ -1,33 +1,33 @@
-import { isAlcoholic, is18} from "../../plugIns";
+import { isAlcoholic, is18 } from '../../plugIns';
 
-describe("cocktail - isAlcoholic", () => {
-    it("should true if parameter (alcoholic) is true", async () => {
-      let alcoholic: string = "true"
-  
-      const result = isAlcoholic(alcoholic);
-      expect(result).toBeTruthy();
-    })
+describe('cocktail - isAlcoholic', () => {
+	it('should true if parameter (alcoholic) is true', async () => {
+		const alcoholic = 'true';
 
-    it("should false if parameter (alcoholic) is false", async () => {
-      let alcoholic: string = "false"
-  
-      const result = isAlcoholic(alcoholic);
-      expect(result).toBeFalsy();
-    })
-})
+		const result = isAlcoholic(alcoholic);
+		expect(result).toBeTruthy();
+	});
 
-describe("cocktail - is18", () => {
-  it("should true if parameter (age) is true", async () => {
-    let age: string = "true"
+	it('should false if parameter (alcoholic) is false', async () => {
+		const alcoholic = 'false';
 
-    const result = is18(age);
-    expect(result).toBeTruthy();
-  })
+		const result = isAlcoholic(alcoholic);
+		expect(result).toBeFalsy();
+	});
+});
 
-  it("should false if parameter (age) is false", async () => {
-    let age: string = "false"
+describe('cocktail - is18', () => {
+	it('should true if parameter (age) is true', async () => {
+		const age = 'true';
 
-    const result = is18(age);
-    expect(result).toBeFalsy();
-  })
-})
+		const result = is18(age);
+		expect(result).toBeTruthy();
+	});
+
+	it('should false if parameter (age) is false', async () => {
+		const age = 'false';
+
+		const result = is18(age);
+		expect(result).toBeFalsy();
+	});
+});
