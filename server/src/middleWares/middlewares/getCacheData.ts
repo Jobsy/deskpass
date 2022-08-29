@@ -37,12 +37,12 @@ export const getCacheData = async (
 		} else {
 			next();
 			res.locals.redisClient = redisClient; // return redisClient as response if data cannot be retrieve
-			return (res = { locals: { redisClient } } as unknown as Response); // for testing
+			return (res = {
+				locals: { redisClient },
+			} as unknown as Response); // for testing
 		}
 	} catch (error) {
 		console.error(error); // return any errors accordingly without breaking the code
 		return res.status(404);
 	}
 };
-
-// function createClient<redis.RedisModules, redis.RedisFunctions, redis.RedisScripts>(options?: redis.RedisClientOptions<redis.RedisModules, redis.RedisFunctions, redis.RedisScripts> | undefined): RedisClientType<...>
