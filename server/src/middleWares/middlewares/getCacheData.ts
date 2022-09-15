@@ -1,19 +1,8 @@
+
 import { Request, Response, NextFunction } from 'express';
 
-const redis = require('redis');
+import redisClient from '../../redis';
 
-let redisClient: any;
-
-export const db = (async () => {
-	// Redis will use port 6379, the default port.
-	redisClient = await redis.createClient();
-	// on() method that registers events on the Redis object
-	redisClient.on('error', (error: Error) => console.error(`Error : ${error}`));
-	// connect() method, which starts the connection with Redis on the default port 6379
-	await redisClient.connect();
-
-	return redisClient;
-})();
 
 // get cached data from redis database
 export const getCacheData = async (
@@ -26,7 +15,6 @@ export const getCacheData = async (
 
 	try {
 		const cacheResults = await redisClient.get(key); // retrieves cached data from redis if available
-
 		if (cacheResults) {
 			results = JSON.parse(cacheResults);
 
@@ -35,11 +23,7 @@ export const getCacheData = async (
 				data: results, // return retrieved cached data
 			});
 		} else {
-			next();
-			res.locals.redisClient = redisClient; // return redisClient as response if data cannot be retrieve
-			return (res = {
-				locals: { redisClient },
-			} as unknown as Response); // for testing
+			next(); // continue to url if cached-key not found
 		}
 	} catch (error) {
 		console.error(error); // return any errors accordingly without breaking the code

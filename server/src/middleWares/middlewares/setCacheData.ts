@@ -1,8 +1,10 @@
+
 import { Request, Response } from 'express';
+
+import redisClient from '../../redis';
 
 // set/store uncached data on redis database
 export const setCacheData = async (req: Request, res: Response) => {
-	const redisClient = res.locals.redisClient; // redisClient received from the getCacheData middleware
 	const results = res.locals.results; // data to be cached
 	const key = res.locals.key; // key received from the getCacheData middleware
 
