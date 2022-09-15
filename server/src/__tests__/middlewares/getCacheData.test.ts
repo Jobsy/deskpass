@@ -1,15 +1,14 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { db, getCacheData } from '../../middleWares/middlewares/getCacheData';
+import { getCacheData } from '../../middleWares';
+import redisClient from '../../redis';
 
 const _ = require('lodash');
 
 let res: Response;
 let next: NextFunction;
 
-db.then((redisClient) => {
-	redisClient.set('cahced-key-found', JSON.stringify({ val: 'somevalues' }));
-});
+redisClient.set('cahced-key-found', JSON.stringify({ val: 'somevalues' }));
 
 beforeEach(() => {
 	// mocked response
@@ -44,13 +43,13 @@ describe('getCacheData', () => {
 		expect(_.cloneDeep(result).res.send.data).toBeTruthy();
 	});
 
-	it('should get continue to url and return redisClient if cached-key not found', async () => {
+	it('should get continue to url if cached-key not found', async () => {
 		// mocked request
 		const req = {
 			originalUrl: 'cahced-key-not-found',
 		} as unknown as Request;
 
 		const result = await getCacheData(req as any, res as any, next);
-		expect(result.locals?.redisClient).toBeTruthy();
+        expect(result).toBeFalsy();
 	});
 });
