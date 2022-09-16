@@ -1,8 +1,6 @@
-
 import { Request, Response, NextFunction } from 'express';
 
 import redisClient from '../../redis';
-
 
 // get cached data from redis database
 export const getCacheData = async (

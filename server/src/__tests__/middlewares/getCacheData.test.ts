@@ -50,6 +50,6 @@ describe('getCacheData', () => {
 		} as unknown as Request;
 
 		const result = await getCacheData(req as any, res as any, next);
-        expect(result).toBeFalsy();
+		expect(result).toBeFalsy();
 	});
 });
