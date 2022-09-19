@@ -46,6 +46,8 @@ Run `nmp run dev` for a dev server. Navigate to `http://localhost:8000/`. The ap
             -- README
             -- tsconfig
     -- server
+        -- .husky
+        -- assests
         -- dist
         -- src
             -- tests
@@ -53,16 +55,45 @@ Run `nmp run dev` for a dev server. Navigate to `http://localhost:8000/`. The ap
             -- middleWares
             -- plugins
             -- routes
+            -- app.ts
             -- proxy.ts
+            -- redis.ts
             -- server.ts
         -- dump.rdb
-        -- README
+        -- docker-compose.yml
+        -- Dockerfile
         -- package
+        -- README
+        -- Procfile
         -- tsconfig
 
 ## Build
 
 None
+
+## Start docker
+
+Run `nmp run docker`
+
+## Running docker compose
+
+Run `nmp run start:dockercompose`
+
+## Stop docker compose
+
+Run `nmp run stop:dockercompose`
+
+## Rebuld docker compose
+
+Run `nmp run dockercompose:rebuild`
+
+## Running dev
+
+Run `nmp run dev`
+
+## Running unit tests
+
+Run `nmp run test`
 
 ## Running unit tests
 
@@ -75,3 +106,9 @@ Follow the links below for full API docs for each collection
 Open [CockTail](https://documenter.getpostman.com/view/17667641/VUqrPHD1) to view it in the browser\
 Open [Country](https://documenter.getpostman.com/view/17667641/VUqrPHD2) to view it in the browser\
 Open [Dog](https://documenter.getpostman.com/view/17667641/VUqrPHHH) to view it in the browser
+
+## Heroku address
+
+Follow the links below to connect directly with the api - hosted on heroku
+https://deskpass-demo.herokuapp.com/
+Open [Deskpass api - hosted on Heroku](https://deskpass-demo.herokuapp.com/) to view it in the browser
