@@ -1,9 +1,9 @@
 import * as redis from 'redis';
 
-// const redisClient = redis.createClient();
 const redisClient = redis.createClient({
 	// Redis will use port 6379, the default port
 	// and connect to the redis docker through the host address "cache" as defined on docker-compose
+	url: process.env.REDIS_URL, // Heroku connects to Redis db using Redis URL
 	socket: {
 		host: process.env.REDIS_HOST,
 		port: 6379,
